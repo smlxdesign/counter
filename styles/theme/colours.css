@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+	/*
+	*    VARIABLES
+	*/
+	--grey50: #f9fafb;
+	--grey300: #cbd5e1;
+	--grey500: #6b7280;
+	--grey700: #374151;
+	--grey950: #030712;
+
+	--primary50: #eff6ff;
+	--primary300: #93c5fd;
+	--primary500: #3b82f6;
+	--primary700: #1d4ed8;
+	--primary950: #172554;
+
+	--error50: #fef2f2;
+	--error300: #fca5a5;
+	--error500: #ef4444;
+	--error700: #b91c1c;
+	--error950: #450a0a;
+
+	--warning50: #fff7ed;
+	--warning300: #fdba74;
+	--warning500: #f97316;
+	--warning700: #c2410c;
+	--warning950: #431407;
+
+	--success50: #f0fdf4;
+	--success300: #86efac;
+	--success500: #22c55e;
+	--success700: #15803d;
+	--success950: #052e16;
+
+	/*
+	*    FONTS
+	*/
+	font-family: 'Rubik', 'Nunito', sans-serif, system-ui;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
