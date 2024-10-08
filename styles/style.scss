@@ -9,6 +9,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100dvh;
+	overflow: hidden;
 
 	background-color: var(--grey50);
 
@@ -22,6 +23,11 @@ body {
 			color: var(--primary700);
 		}
 
+		h1.big {
+			font-size: 6rem;
+			margin-bottom: 0;
+		}
+
 		.buttons {
 			display: flex;
 			gap: 8px;
@@ -31,6 +37,7 @@ body {
 				background-color: var(--shades0);
 				border: none;
 				border-radius: 4px;
+				cursor: pointer;
 			}
 
 			button.primary {

@@ -1,20 +1,21 @@
-let count = 2;
+let count = loadFromStorage() || 0;
 
 renderApp();
 
 function renderApp() {
 	const mainElement = document.querySelector('main');
-	const countAboveZero = count > 0;
+	const aboveZero = count > 0;
 
 	let newHtml = '';
 
 	newHtml = `
-		<h1 ${countAboveZero ? 'class="big"' : ''}>
-			${countAboveZero ? count : 'Counter'}
+		<h1 ${aboveZero ? 'class="big"' : ''}>
+			${aboveZero ? count : 'Counter'}
 		</h1>
 
 		<div class="buttons">
-			<button onclick="updateCount('down')" id="btn-down">Decrease</button>
+			<button
+			onclick="updateCount('down')" id="btn-down">Decrease</button>
 			<button onclick="updateCount('reset')" id="btn-reset">Reset</button>
 			<button onclick="updateCount('up')" class="primary" id="btn-up">Increase</button>
 		</div>
@@ -26,7 +27,9 @@ function renderApp() {
 function updateCount(action) {
 	switch (action) {
 		case 'down':
-			count--;
+			if (count - 1 >= 0) {
+				count--;
+			}
 			break;
 
 		case 'reset':
@@ -41,5 +44,14 @@ function updateCount(action) {
 			break;
 	}
 
+	saveToStorage();
 	renderApp();
+}
+
+function saveToStorage() {
+	localStorage.setItem('count', count);
+}
+
+function loadFromStorage() {
+	return localStorage.getItem('count');
 }
