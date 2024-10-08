@@ -1,1 +1,43 @@
-@import url(./theme/colours.css);/*# sourceMappingURL=style.css.map */
+@import url(./theme/colours.css);
+* {
+  color: var(--grey700);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background-color: var(--grey50);
+}
+body main {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main h1 {
+  color: var(--primary700);
+}
+body main .buttons {
+  display: flex;
+  gap: 8px;
+}
+body main .buttons button {
+  padding: 8px 16px;
+  background-color: var(--shades0);
+  border: none;
+  border-radius: 4px;
+}
+body main .buttons button.primary {
+  background-color: var(--primary500);
+  color: var(--primary50);
+}
+body main .buttons button:hover {
+  background-color: var(--primary300);
+  color: var(--primary950);
+}
+body main .buttons button.primary:hover {
+  background-color: var(--primary700);
+  color: var(--primary50);
+}/*# sourceMappingURL=style.css.map */
