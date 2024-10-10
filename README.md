@@ -4,7 +4,9 @@
 
 ## Features
 
-- Counts up to 10 in increments of 1.
+- Count up and down
+- Reset count
+- Milestones
 
 ## Technologies
 
